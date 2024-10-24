@@ -17,12 +17,10 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold mb-4">Welcome to the Home Page</h1>
+      <h1 className="text-4xl font-bold">Welcome to the Home Page</h1>
       
-      {/* Input field and search button */}
       <Inputbutton />
 
-      {/* About Us and Contact Us Buttons */}
       <div className="mt-6 flex space-x-4">
         <Button type="primary" onClick={handleAboutClick}>
           Go To About Us

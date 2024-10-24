@@ -4,15 +4,15 @@ const Inputbutton = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearch = () => {
-    alert(`Searching for: ${searchQuery}`); // This will display the searched term
+    alert(`Searching for: ${searchQuery}`);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold mb-4">Search Something</h1>
+    <div className="flex flex-col items-center">
+      <h1 className="text-4xl font-bold mb-2">Search Something</h1>
       
-      <div className="flex">
-        <input
+      <div className="flex space-x-2">
+        <input 
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
