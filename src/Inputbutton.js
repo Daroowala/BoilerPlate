@@ -3,6 +3,35 @@ import React, { useState } from 'react';
 const Inputbutton = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
+  const InputFieldForm = () => {
+    const [inputValue1, setInputValue1] = useState('');
+
+    const handleInputChange1 = (e) => {
+      setInputValue1 (e.target.value);
+    }
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+    };
+    return (
+      <form onSubmit={handleSubmit}>
+      <div className="flex space-x-2">
+      
+        <input
+          type="text"
+          value={inputValue1}
+          onChange={handleInputChange1}
+          className="border rounded-l-lg p-2 w-64"
+          placeholder="Enter data here..."
+        />
+      </div>
+      <button onClick={handleSearch}
+      className="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-700" type="submit">Submit
+      </button>
+    </form>
+    )
+  };
+
   const handleSearch = () => {
     alert(`Searching for: ${searchQuery}`);
   };
@@ -26,6 +55,8 @@ const Inputbutton = () => {
           Search
         </button>
       </div>
+            <InputFieldForm />
+
     </div>
   );
 };

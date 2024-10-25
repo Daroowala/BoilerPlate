@@ -11,8 +11,8 @@ function About() {
   };
 
   return (
-  <div>
-      <h1>About Us</h1>
+  <div className="flex flex-col items-center justify-center h-screen ">
+      <h1 className="text-4xl font-bold">About Us</h1>
       <Button type="primary" onClick={handleHomeButtonClick}>
         Go to Home Page
       </Button>

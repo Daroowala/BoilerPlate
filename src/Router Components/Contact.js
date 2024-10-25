@@ -9,8 +9,8 @@ function Contact() {
     navigate('/'); 
   };
   return (
-    <div>
-        <h1>Contact Us</h1>
+    <div className="flex flex-col items-center justify-center h-screen">
+        <h1 className="text-4xl font-bold">Contact Us</h1>
         <Button type="primary" onClick={handleHomeButtonClick}>
           Go to Home Page
         </Button>
