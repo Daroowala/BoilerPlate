@@ -12,6 +12,7 @@ const Inputbutton = () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
+      alert(`Submitted value: ${inputValue1}`);
     };
     return (
       <form onSubmit={handleSubmit}>
@@ -24,10 +25,12 @@ const Inputbutton = () => {
           className="border rounded-l-lg p-2 w-64"
           placeholder="Enter data here..."
         />
-      </div>
-      <button onClick={handleSearch}
+      
+      <button 
+      onClick={handleSearch}
       className="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-700" type="submit">Submit
       </button>
+      </div>
     </form>
     )
   };
@@ -37,10 +40,10 @@ const Inputbutton = () => {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-bold mb-2">Search Something</h1>
+    <div className="flex flex-col items-center space-y-4">
+      <h1 className="text-4xl font-bold mb-2 ">Search Something</h1>
       
-      <div className="flex space-x-2">
+      <div className="flex space-x-2 ">
         <input 
           type="text"
           value={searchQuery}
@@ -50,7 +53,7 @@ const Inputbutton = () => {
         />
         <button
           onClick={handleSearch}
-          className="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-700"
+          className="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-700 "
         >
           Search
         </button>
