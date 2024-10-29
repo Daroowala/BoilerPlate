@@ -5,7 +5,7 @@ import Home from './Router Components/Home';
 import About from './Router Components/About';
 import Contact from './Router Components/Contact';
 import Inputbutton from './Inputbutton';
-
+import Navbar from './Navbar'
 
 
 function App() {
@@ -25,6 +25,7 @@ function Main() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/input" element={<Inputbutton />} /> 
+        <Route path="/navbar" element={<Navbar />} />
 
       </Routes>
 
