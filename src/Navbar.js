@@ -4,14 +4,14 @@ import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/ico
 
 const Navbar = () => {
   return (
-    <Menu mode="horizontal">
-      <Menu.Item key="mail" icon={<MailOutlined />}>
+    <Menu className='bg-neutral-300 font-bold ' mode="horizontal">
+      <Menu.Item key="mail" icon={<MailOutlined />} style={{ color: 'blue', fontSize: '18px'}}>
         Home
       </Menu.Item>
-      <Menu.Item key="app" icon={<AppstoreOutlined />}>
+      <Menu.Item key="app" icon={<AppstoreOutlined />} style={{ color: 'blue', fontSize: '18px' }}>
         About
       </Menu.Item>
-      <Menu.Item key="setting" icon={<SettingOutlined />}>
+      <Menu.Item key="setting" icon={<SettingOutlined />}style={{ color: 'blue', fontSize: '18px' }}>
         Contact
       </Menu.Item>
     </Menu>
