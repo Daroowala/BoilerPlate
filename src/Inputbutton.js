@@ -12,7 +12,9 @@ const Inputbutton = () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      alert(`Submitted value: ${inputValue1}`);
+      localStorage.setItem('submittedData', inputValue1);
+      alert(`Data saved: ${inputValue1}`); 
+        setInputValue1('');
     };
     return (
       <form onSubmit={handleSubmit}>
@@ -36,7 +38,8 @@ const Inputbutton = () => {
   };
 
   const handleSearch = () => {
-    alert(`Searching for: ${searchQuery}`);
+    const googleUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+    window.open(googleUrl, '_blank'); 
   };
 
   return (
