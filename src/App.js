@@ -1,12 +1,11 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Router Components/Home';
 import About from './Router Components/About';
 import Contact from './Router Components/Contact';
 import Inputbutton from './Inputbutton';
 import Navbar from './Navbar';
-
 
 
 function App() {

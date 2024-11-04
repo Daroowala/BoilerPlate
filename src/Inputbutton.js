@@ -29,7 +29,7 @@ const Inputbutton = () => {
         />
       
       <button 
-      onClick={handleSearch}
+      onClick={handleSubmit}
       className="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-700" type="submit">Submit
       </button>
       </div>
