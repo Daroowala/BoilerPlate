@@ -42,6 +42,13 @@ const Inputbutton = () => {
     window.open(googleUrl, '_blank'); 
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
+
   return (
     <div className="flex flex-col items-center space-y-4">
       <h1 className="text-4xl font-bold mb-2 ">Search Something</h1>
@@ -51,6 +58,7 @@ const Inputbutton = () => {
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
+          onKeyDown={handleKeyDown}
           className="border rounded-l-lg p-2 w-64"
           placeholder="Enter search term..."
         />
