@@ -6,6 +6,9 @@ import About from './Router Components/About';
 import Contact from './Router Components/Contact';
 import Inputbutton from './Inputbutton';
 import Navbar from './Navbar';
+import './firebaseConfig';
+import Signup from './Signup';
+import Login from './Login'; 
 
 
 function App() {
@@ -25,6 +28,8 @@ function Main() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/input" element={<Inputbutton />} /> 
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );
