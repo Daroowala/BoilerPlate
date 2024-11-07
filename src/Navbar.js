@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
+    <>
     <Menu className='bg-neutral-300 font-bold ' mode="horizontal">
       <Menu.Item key="mail" icon={<MailOutlined />} style={{ color: 'blue', fontSize: '18px'}}>
        <Link to="/">Home</Link> 
@@ -16,7 +17,19 @@ const Navbar = () => {
       <Menu.Item key="setting" icon={<SettingOutlined />}style={{ color: 'blue', fontSize: '18px' }}>
       <Link to="/contact">Contact</Link>
       </Menu.Item>
+      <li style={{ color:'blue',}}>
+          <Link to="/signup">
+            <button>Signup</button>
+          </Link>
+        </li>
+        <li>
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
+        </li>
+  
     </Menu>
+    </>
   );
 };
 

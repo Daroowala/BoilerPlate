@@ -1,5 +1,8 @@
+// src/Signup.js
 import React, { useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from './firebaseConfig';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import './App.css';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
@@ -8,8 +11,6 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const auth = getAuth();
-
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       alert('User signed up successfully!');
@@ -22,24 +23,20 @@ const Signup = () => {
     <div className="signup-container">
       <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <input
-            type="password"
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
         {error && <p>{error}</p>}
-        <button type="submit">Signup</button>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   );

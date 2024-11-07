@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Router Components/Home';
 import About from './Router Components/About';
@@ -8,7 +8,7 @@ import Inputbutton from './Inputbutton';
 import Navbar from './Navbar';
 import './firebaseConfig';
 import Signup from './Signup';
-import Login from './Login'; 
+import Login from './Login';
 
 
 function App() {
