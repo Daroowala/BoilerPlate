@@ -1,5 +1,5 @@
+// App.js
 import './App.css';
-// import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Router Components/Home';
 import About from './Router Components/About';
@@ -10,7 +10,6 @@ import './firebaseConfig';
 import Signup from './Signup';
 import Login from './Login';
 import Logout from './logOut';
-
 
 function App() {
   return (
@@ -23,7 +22,7 @@ function App() {
 function Main() {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -32,8 +31,6 @@ function Main() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
-
-
       </Routes>
     </>
   );
