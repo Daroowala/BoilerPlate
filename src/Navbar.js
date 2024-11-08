@@ -1,18 +1,12 @@
 import React from 'react';
 import { Menu } from 'antd';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Logout from './logOut';
 
 
 const Navbar = () => {
-  const navigate = useNavigate();
-  const handleLogout = () => {
-    // Yahan apna logout logic likhein, jaise Firebase signOut call
-    console.log("User logged out");
-    
-    // Logout ke baad Login page par navigate karna
-    navigate("/login");
-  };
+  
   return (
     <>
     
@@ -26,23 +20,15 @@ const Navbar = () => {
       </Menu.Item>
       <Menu.Item key="setting" icon={<SettingOutlined />}style={{ color: 'blue', fontSize: '18px' }}>
       <Link to="/contact">Contact</Link>
-      <ul style={{color:'blue', display:'flex', marginLeft:'845px'}}>
-      <li>
-          <Link to="/signup">
-            <button>SignUp</button>
-          </Link>
-        </li>
-        <li>
-          <Link to="/login">
-            <button style={{marginLeft:'30px'}}>Login</button>
-          </Link>
-        </li>
-        
-        </ul>
-        
+      
+         <div style={{ marginLeft: '790px', display: 'flex', alignItems: 'center' }}>
+        <Link to="/signup" style={{ color: 'blue', marginRight: '30px' }}>SignUp</Link>
+        <Link to="/login" style={{ color: 'blue', marginRight: '20px' }}>Login</Link>
+        <Logout />
+      </div>
       </Menu.Item>
+     
     </Menu>
-    
     </>
   );
 };

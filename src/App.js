@@ -9,6 +9,7 @@ import Navbar from './Navbar';
 import './firebaseConfig';
 import Signup from './Signup';
 import Login from './Login';
+import Logout from './logOut';
 
 
 function App() {
@@ -30,6 +31,9 @@ function Main() {
         <Route path="/input" element={<Inputbutton />} /> 
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
+
+
       </Routes>
     </>
   );

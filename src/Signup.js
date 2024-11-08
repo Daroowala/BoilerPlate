@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { auth } from './firebaseConfig';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const Signup = () => {
   const [email, setEmail] = useState('');
@@ -18,6 +20,9 @@ const Signup = () => {
       setError(error.message);
     }
   };
+
+  const navigate = useNavigate();
+navigate('/home');
 
   return (
     <div className="signup-container">
